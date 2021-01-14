@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoboNightGamePicker", "HoboNightGamePicker\HoboNightGamePicker.csproj", "{21A97F02-2C20-4DE3-A588-12031759EC9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamePicker", "GamePicker\GamePicker.csproj", "{9BE98A42-0D51-4D24-8F79-4243984E2579}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21A97F02-2C20-4DE3-A588-12031759EC9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A97F02-2C20-4DE3-A588-12031759EC9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A97F02-2C20-4DE3-A588-12031759EC9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A97F02-2C20-4DE3-A588-12031759EC9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BE98A42-0D51-4D24-8F79-4243984E2579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BE98A42-0D51-4D24-8F79-4243984E2579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BE98A42-0D51-4D24-8F79-4243984E2579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BE98A42-0D51-4D24-8F79-4243984E2579}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {670BBF79-3C3B-4B4E-981C-C988F8214201}
+	EndGlobalSection
+EndGlobal
