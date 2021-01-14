@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <string>Arcade</string>
+  <string>Board Game</string>
+  <string>Bullet Hell</string>
+  <string>Chill</string>
+  <string>Competitive</string>
+  <string>Crafting</string>
+  <string>FPS</string>
+  <string>Game Pass</string>
+  <string>Highly Cooperative</string>
+  <string>MMO</string>
+  <string>Platforming</string>
+  <string>RPG</string>
+  <string>Spectacle Fighter</string>
+  <string>Stealth</string>
+  <string>Third Person</string>
+  <string>Tournament Fighter</string>
+  <string>Turn-based</string>
+  <string>Zombies</string>
+</ArrayOfString>

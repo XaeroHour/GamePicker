@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfGame xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Game>
+    <Name>20XX</Name>
+    <SupportedPlayers>2</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>platformer</string>
+      <string>platforming</string>
+      <string>Platforming</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Armello</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>board game</string>
+      <string>turn-based strategy</string>
+      <string>Board Game</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Astroneer</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>9</SupportedPlatforms>
+    <Tags>
+      <string>crafting</string>
+      <string>space</string>
+      <string>Crafting</string>
+      <string>Chill</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Castle Crashers</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>9</SupportedPlatforms>
+    <Tags>
+      <string>arcade</string>
+      <string>Arcade</string>
+      <string>Competitive</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Destiny 2</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>15</SupportedPlatforms>
+    <Tags>
+      <string>dope</string>
+      <string>Competitive</string>
+      <string>FPS</string>
+      <string>Game Pass</string>
+      <string>Highly Cooperative</string>
+      <string>Platforming</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Divinity: Original Sin 2</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>rpg</string>
+      <string>turn-based</string>
+      <string>RPG</string>
+      <string>Turn-based</string>
+      <string>Highly Cooperative</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Dying Light</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>Zombies</string>
+      <string>RPG</string>
+      <string>zombies</string>
+      <string>rpg</string>
+      <string>Crafting</string>
+      <string>FPS</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Factorio</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>strategy</string>
+      <string>crafting</string>
+      <string>automation</string>
+      <string>Crafting</string>
+      <string>Highly Cooperative</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Final Fantasy XIV</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>10</SupportedPlatforms>
+    <Tags>
+      <string>Chill</string>
+      <string>MMO</string>
+      <string>RPG</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Ghost of Tsushima</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>2</SupportedPlatforms>
+    <Tags>
+      <string>Stealth</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Golf It!</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>rage</string>
+      <string>Arcade</string>
+      <string>Competitive</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Minecraft</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>31</SupportedPlatforms>
+    <Tags>
+      <string>Crafting</string>
+      <string>crafting</string>
+      <string>Zombies</string>
+      <string>Platforming</string>
+      <string>Game Pass</string>
+      <string>Chill</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Out of Space</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>overcooked-esque</string>
+      <string>Highly Cooperative</string>
+      <string>Chill</string>
+      <string>Arcade</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Overcooked</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>1</SupportedPlatforms>
+    <Tags>
+      <string>Highly Cooperative</string>
+      <string>Arcade</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Overcooked 2</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>1</SupportedPlatforms>
+    <Tags>
+      <string>Arcade</string>
+      <string>Highly Cooperative</string>
+    </Tags>
+  </Game>
+  <Game>
+    <Name>Satisfactory</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>Crafting</string>
+      <string>Highly Cooperative</string>
+    </Tags>
+  </Game>
+</ArrayOfGame>

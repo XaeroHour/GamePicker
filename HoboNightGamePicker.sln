@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoboNightGamePicker", "HoboNightGamePicker\HoboNightGamePicker.csproj", "{21A97F02-2C20-4DE3-A588-12031759EC9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamePicker", "GamePicker\GamePicker.csproj", "{9BE98A42-0D51-4D24-8F79-4243984E2579}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamePicker", "GamePicker\GamePicker.csproj", "{9BE98A42-0D51-4D24-8F79-4243984E2579}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

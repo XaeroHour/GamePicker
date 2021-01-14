@@ -6,56 +6,64 @@ using System.Xml.Serialization;
 
 namespace GamePicker
 {
-    public class GameLibrary
+    /// <summary>
+    /// Class for managing a game library
+    /// </summary>
+    public static class GameLibrary
     {
-        public List<Game> Library = new List<Game>();
+        /// <summary>
+        /// The list of games in the library
+        /// </summary>
+        public static List<Game> HoboGameLibrary = new List<Game>();
 
-        public string XMLFilePath { get; private set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public static string XMLFilePath { get; } = @"Files\HoboGameLibrary.xml";
 
-        public GameLibrary()
+        static GameLibrary()
         {
-            XMLFilePath = "HoboGameLibrary.xml";
             Deserialize();
         }
 
-        ~GameLibrary()
+        public static void SaveLibrary()
         {
             Serialize();
         }
 
-        public void AddGame(Game newTitle)
+        public static void AddGame(Game newTitle)
         {
-            if(!Library.Contains(newTitle))
+            if(!HoboGameLibrary.Contains(newTitle))
             {
-                Library.Add(newTitle);
+                HoboGameLibrary.Add(newTitle);
             }
         }
 
-        public void Serialize()
+        public static void Serialize()
         {
-            XmlSerializer serializer = new XmlSerializer(Library.GetType());
+            XmlSerializer serializer = new XmlSerializer(HoboGameLibrary.GetType());
 
-            Library.Sort();
+            HoboGameLibrary.Sort();
 
             using (StreamWriter writer = new StreamWriter(XMLFilePath))
             {
-                serializer.Serialize(writer, Library);
+                serializer.Serialize(writer, HoboGameLibrary);
             }
         }
 
-        public void Deserialize()
+        public static void Deserialize()
         {
             if(!File.Exists(XMLFilePath))
             {
                 return;
             }
 
-            XmlSerializer serializer = new XmlSerializer(Library.GetType());
+            XmlSerializer serializer = new XmlSerializer(HoboGameLibrary.GetType());
 
             using (StreamReader reader = new StreamReader(XMLFilePath))
             {
-                Library = (List<Game>)serializer.Deserialize(reader);
-                Library.Sort();
+                HoboGameLibrary = (List<Game>)serializer.Deserialize(reader);
+                HoboGameLibrary.Sort();
             }
         }
     }
