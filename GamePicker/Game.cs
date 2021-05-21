@@ -140,9 +140,18 @@ namespace GamePicker
             }
         }
 
+        public static bool operator==(Game game, string name)
+        {
+            return string.Equals(game?.Name, name, StringComparison.OrdinalIgnoreCase);
+        }
+        public static bool operator!=(Game game, string name)
+        {
+            return !string.Equals(game?.Name, name, StringComparison.OrdinalIgnoreCase);
+        }
+
         public override bool Equals(object obj)
         {
-            return string.Equals(this.Name, ((Game)obj).Name, StringComparison.OrdinalIgnoreCase);
+            return string.Equals(this.Name, ((Game)obj)?.Name, StringComparison.OrdinalIgnoreCase);
         }
 
         public override int GetHashCode()

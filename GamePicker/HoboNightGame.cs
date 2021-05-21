@@ -13,5 +13,15 @@ namespace GamePicker
         /// The last time the game was picked for a hobo night
         /// </summary>
         public DateTime LastPicked;
+
+        public HoboNightGame(string name = null, int players = 1, int platforms = 0, params string[] tags) : base(name, players, platforms, tags)
+        {
+            LastPicked = DateTime.MinValue;
+        }
+
+        public HoboNightGame() : base()
+        {
+            LastPicked = DateTime.MinValue;
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace GamePicker
         /// <summary>
         /// XML location for the tags xml
         /// </summary>
-        public static string XMLFilePath { get; } = @"Files\SupportedTags.xml";
+        public static string XMLFilePath { get; } = $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\GamePicker\SupportedTags.xml";
 
         static TagManager()
         {

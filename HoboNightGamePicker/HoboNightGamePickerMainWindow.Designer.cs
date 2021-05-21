@@ -40,6 +40,9 @@ namespace HoboNightGamePicker
             this.button_AddNewGame = new System.Windows.Forms.Button();
             this.label_NewGame = new System.Windows.Forms.Label();
             this.groupBox_GamePicker = new System.Windows.Forms.GroupBox();
+            this.label_Hat = new System.Windows.Forms.Label();
+            this.button_PickAGameFromTheHat = new System.Windows.Forms.Button();
+            this.checkedListBox_GamePickerGameHat = new System.Windows.Forms.CheckedListBox();
             this.checkedListBox_GamePickerTags = new System.Windows.Forms.CheckedListBox();
             this.checkBox_EnforcePlayerCount = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,6 +60,7 @@ namespace HoboNightGamePicker
             this.label_Platforms = new System.Windows.Forms.Label();
             this.label_Tags = new System.Windows.Forms.Label();
             this.checkedListBox_Platforms = new System.Windows.Forms.CheckedListBox();
+            this.button_Lock = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox_GamePicker.SuspendLayout();
             this.groupBox_SelectedGame.SuspendLayout();
@@ -152,6 +156,10 @@ namespace HoboNightGamePicker
             // 
             // groupBox_GamePicker
             // 
+            this.groupBox_GamePicker.Controls.Add(this.button_Lock);
+            this.groupBox_GamePicker.Controls.Add(this.label_Hat);
+            this.groupBox_GamePicker.Controls.Add(this.button_PickAGameFromTheHat);
+            this.groupBox_GamePicker.Controls.Add(this.checkedListBox_GamePickerGameHat);
             this.groupBox_GamePicker.Controls.Add(this.checkedListBox_GamePickerTags);
             this.groupBox_GamePicker.Controls.Add(this.checkBox_EnforcePlayerCount);
             this.groupBox_GamePicker.Controls.Add(this.label1);
@@ -164,13 +172,42 @@ namespace HoboNightGamePicker
             this.groupBox_GamePicker.Controls.Add(this.textBox_SelectedGame);
             this.groupBox_GamePicker.Location = new System.Drawing.Point(17, 701);
             this.groupBox_GamePicker.Name = "groupBox_GamePicker";
-            this.groupBox_GamePicker.Size = new System.Drawing.Size(951, 602);
+            this.groupBox_GamePicker.Size = new System.Drawing.Size(951, 630);
             this.groupBox_GamePicker.TabIndex = 13;
             this.groupBox_GamePicker.TabStop = false;
             this.groupBox_GamePicker.Text = "GamePicker";
             // 
+            // label_Hat
+            // 
+            this.label_Hat.AutoSize = true;
+            this.label_Hat.Location = new System.Drawing.Point(600, 28);
+            this.label_Hat.Name = "label_Hat";
+            this.label_Hat.Size = new System.Drawing.Size(66, 20);
+            this.label_Hat.TabIndex = 36;
+            this.label_Hat.Text = "The Hat";
+            // 
+            // button_PickAGameFromTheHat
+            // 
+            this.button_PickAGameFromTheHat.Location = new System.Drawing.Point(584, 525);
+            this.button_PickAGameFromTheHat.Name = "button_PickAGameFromTheHat";
+            this.button_PickAGameFromTheHat.Size = new System.Drawing.Size(367, 35);
+            this.button_PickAGameFromTheHat.TabIndex = 35;
+            this.button_PickAGameFromTheHat.Text = "Pick a Game From the hat!!";
+            this.button_PickAGameFromTheHat.UseVisualStyleBackColor = true;
+            this.button_PickAGameFromTheHat.Click += new System.EventHandler(this.button_PickAGameFromTheHat_Click);
+            // 
+            // checkedListBox_GamePickerGameHat
+            // 
+            this.checkedListBox_GamePickerGameHat.CheckOnClick = true;
+            this.checkedListBox_GamePickerGameHat.FormattingEnabled = true;
+            this.checkedListBox_GamePickerGameHat.Location = new System.Drawing.Point(594, 51);
+            this.checkedListBox_GamePickerGameHat.Name = "checkedListBox_GamePickerGameHat";
+            this.checkedListBox_GamePickerGameHat.Size = new System.Drawing.Size(351, 372);
+            this.checkedListBox_GamePickerGameHat.TabIndex = 34;
+            // 
             // checkedListBox_GamePickerTags
             // 
+            this.checkedListBox_GamePickerTags.CheckOnClick = true;
             this.checkedListBox_GamePickerTags.FormattingEnabled = true;
             this.checkedListBox_GamePickerTags.Location = new System.Drawing.Point(16, 51);
             this.checkedListBox_GamePickerTags.Name = "checkedListBox_GamePickerTags";
@@ -214,7 +251,7 @@ namespace HoboNightGamePicker
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(369, 22);
+            this.label2.Location = new System.Drawing.Point(369, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 20);
             this.label2.TabIndex = 28;
@@ -231,6 +268,7 @@ namespace HoboNightGamePicker
             // 
             // checkedListBox_GamePickerPlatforms
             // 
+            this.checkedListBox_GamePickerPlatforms.CheckOnClick = true;
             this.checkedListBox_GamePickerPlatforms.FormattingEnabled = true;
             this.checkedListBox_GamePickerPlatforms.Items.AddRange(new object[] {
             "Xbox",
@@ -238,7 +276,7 @@ namespace HoboNightGamePicker
             "Switch",
             "PC",
             "Mobile"});
-            this.checkedListBox_GamePickerPlatforms.Location = new System.Drawing.Point(373, 45);
+            this.checkedListBox_GamePickerPlatforms.Location = new System.Drawing.Point(373, 51);
             this.checkedListBox_GamePickerPlatforms.Name = "checkedListBox_GamePickerPlatforms";
             this.checkedListBox_GamePickerPlatforms.Size = new System.Drawing.Size(152, 165);
             this.checkedListBox_GamePickerPlatforms.TabIndex = 26;
@@ -247,9 +285,9 @@ namespace HoboNightGamePicker
             // 
             this.button_PickAGame.Location = new System.Drawing.Point(0, 525);
             this.button_PickAGame.Name = "button_PickAGame";
-            this.button_PickAGame.Size = new System.Drawing.Size(967, 35);
+            this.button_PickAGame.Size = new System.Drawing.Size(367, 35);
             this.button_PickAGame.TabIndex = 24;
-            this.button_PickAGame.Text = "Pick A Game!!";
+            this.button_PickAGame.Text = "Pick A Game from the tags!!";
             this.button_PickAGame.UseVisualStyleBackColor = true;
             this.button_PickAGame.Click += new System.EventHandler(this.button_PickAGame_Click);
             // 
@@ -287,6 +325,7 @@ namespace HoboNightGamePicker
             // 
             // checkedListBox_GameTags
             // 
+            this.checkedListBox_GameTags.CheckOnClick = true;
             this.checkedListBox_GameTags.FormattingEnabled = true;
             this.checkedListBox_GameTags.Location = new System.Drawing.Point(37, 52);
             this.checkedListBox_GameTags.Name = "checkedListBox_GameTags";
@@ -339,6 +378,7 @@ namespace HoboNightGamePicker
             // 
             // checkedListBox_Platforms
             // 
+            this.checkedListBox_Platforms.CheckOnClick = true;
             this.checkedListBox_Platforms.FormattingEnabled = true;
             this.checkedListBox_Platforms.Items.AddRange(new object[] {
             "Xbox",
@@ -352,11 +392,21 @@ namespace HoboNightGamePicker
             this.checkedListBox_Platforms.TabIndex = 11;
             this.checkedListBox_Platforms.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox_Platforms_ItemCheck);
             // 
+            // button_Lock
+            // 
+            this.button_Lock.Location = new System.Drawing.Point(373, 578);
+            this.button_Lock.Name = "button_Lock";
+            this.button_Lock.Size = new System.Drawing.Size(209, 40);
+            this.button_Lock.TabIndex = 37;
+            this.button_Lock.Text = "Lock!";
+            this.button_Lock.UseVisualStyleBackColor = true;
+            this.button_Lock.Click += new System.EventHandler(this.button_Lock_Click);
+            // 
             // Form_HoboNightGamePicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 1315);
+            this.ClientSize = new System.Drawing.Size(991, 1343);
             this.Controls.Add(this.groupBox_SelectedGame);
             this.Controls.Add(this.groupBox_GamePicker);
             this.Controls.Add(this.label_NewGame);
@@ -409,6 +459,10 @@ namespace HoboNightGamePicker
         private System.Windows.Forms.ToolStripMenuItem editTagsToolStripMenuItem;
         private System.Windows.Forms.CheckedListBox checkedListBox_GameTags;
         private System.Windows.Forms.CheckedListBox checkedListBox_GamePickerTags;
+        private System.Windows.Forms.Button button_PickAGameFromTheHat;
+        private System.Windows.Forms.CheckedListBox checkedListBox_GamePickerGameHat;
+        private System.Windows.Forms.Label label_Hat;
+        private System.Windows.Forms.Button button_Lock;
     }
 }
 
