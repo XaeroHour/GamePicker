@@ -45,15 +45,17 @@ namespace GamePicker
         {
             List<HoboNightGame> candidateList = GameLibrary.HoboGameLibrary.Where(game => gameNames.Contains(game.Name)).ToList<HoboNightGame>();
             List<HoboNightGame> weightedList = new List<HoboNightGame>();
-            int weeksSinceLastPick = 0;
 
-            foreach (HoboNightGame candidate in candidateList)
+            candidateList.Sort(delegate (HoboNightGame x, HoboNightGame y)
             {
-                weeksSinceLastPick = (DateTime.Now - candidate.LastPicked).Days / 7;
+                return Math.Min(Math.Max((DateTime.Now - x.LastPicked).Days - (DateTime.Now - y.LastPicked).Days, -1), 1);
+            });
 
-                for (int i = 0; i < Math.Min(Math.Max(1, weeksSinceLastPick), MaximumCandidateWeight); i++)
+            for(int i = 0; i < candidateList.Count; i++)
+            {
+                for(int j = 0; j <= i; j++)
                 {
-                    weightedList.Add(candidate);
+                    weightedList.Add(candidateList[i]);
                 }
             }
 
