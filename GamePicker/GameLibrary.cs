@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
+using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace GamePicker
@@ -58,25 +60,36 @@ namespace GamePicker
 
             HoboGameLibrary.Sort();
 
-            using (StreamWriter writer = new StreamWriter(XMLFilePath))
+            try
             {
-                serializer.Serialize(writer, HoboGameLibrary);
+                using (StreamWriter writer = new StreamWriter(XMLFilePath))
+                {
+                    serializer.Serialize(writer, HoboGameLibrary);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.StackTrace, MessageBoxButtons.OK);
             }
         }
 
         public static void Deserialize()
         {
-            if(!File.Exists(XMLFilePath))
-            {
-                return;
-            }
-
             XmlSerializer serializer = new XmlSerializer(HoboGameLibrary.GetType());
 
-            using (StreamReader reader = new StreamReader(XMLFilePath))
+            try
             {
-                HoboGameLibrary = (List<HoboNightGame>)serializer.Deserialize(reader);
-                HoboGameLibrary.Sort();
+                using (StreamReader reader = File.Exists(XMLFilePath) ?
+                    new StreamReader(XMLFilePath) :
+                    new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("GamePicker.Files.HoboGameLibrary.xml")))
+                {
+                    HoboGameLibrary = (List<HoboNightGame>)serializer.Deserialize(reader);
+                    HoboGameLibrary.Sort();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Exception hit: {ex.Message}", "Cannot Deserialize", MessageBoxButtons.OK);
             }
         }
     }
