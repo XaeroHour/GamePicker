@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <string>Arcade</string>
+  <string>Asymetric</string>
+  <string>Betrayal</string>
   <string>Board Game</string>
   <string>Bullet Hell</string>
   <string>Chill</string>
   <string>Competitive</string>
   <string>Crafting</string>
+  <string>Cross Play</string>
+  <string>Deduction</string>
   <string>FPS</string>
+  <string>Free to play</string>
   <string>Game Pass</string>
   <string>Highly Cooperative</string>
+  <string>Loot-based</string>
   <string>MMO</string>
+  <string>MOBA</string>
+  <string>Overhead View</string>
   <string>Platforming</string>
   <string>RPG</string>
+  <string>Second screen gameplay</string>
   <string>Spectacle Fighter</string>
   <string>Stealth</string>
+  <string>Survival</string>
   <string>Third Person</string>
   <string>Tournament Fighter</string>
   <string>Turn-based</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfHoboNightGame xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Game>
+  <HoboNightGame>
     <Name>20XX</Name>
     <SupportedPlayers>2</SupportedPlayers>
     <SupportedPlatforms>8</SupportedPlatforms>
@@ -9,8 +9,9 @@
       <string>platforming</string>
       <string>Platforming</string>
     </Tags>
-  </Game>
-  <Game>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
     <Name>Armello</Name>
     <SupportedPlayers>4</SupportedPlayers>
     <SupportedPlatforms>8</SupportedPlatforms>
@@ -19,8 +20,9 @@
       <string>turn-based strategy</string>
       <string>Board Game</string>
     </Tags>
-  </Game>
-  <Game>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
     <Name>Astroneer</Name>
     <SupportedPlayers>4</SupportedPlayers>
     <SupportedPlatforms>9</SupportedPlatforms>
@@ -30,8 +32,31 @@
       <string>Crafting</string>
       <string>Chill</string>
     </Tags>
-  </Game>
-  <Game>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Black Angel</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>Highly Cooperative</string>
+      <string>Turn-based</string>
+      <string>Competitive</string>
+      <string>Board Game</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Borderlands</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>11</SupportedPlatforms>
+    <Tags>
+      <string>FPS</string>
+      <string>Loot-based</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
     <Name>Castle Crashers</Name>
     <SupportedPlayers>4</SupportedPlayers>
     <SupportedPlatforms>9</SupportedPlatforms>
@@ -40,11 +65,68 @@
       <string>Arcade</string>
       <string>Competitive</string>
     </Tags>
-  </Game>
-  <Game>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Civilization</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>Highly Cooperative</string>
+      <string>Competitive</string>
+      <string>Board Game</string>
+      <string>Turn-based</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Clue</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>24</SupportedPlatforms>
+    <Tags>
+      <string>Deduction</string>
+      <string>Competitive</string>
+      <string>Chill</string>
+      <string>Board Game</string>
+      <string>Second screen gameplay</string>
+      <string>Turn-based</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Dark Alliance</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>9</SupportedPlatforms>
+    <Tags>
+      <string>Game Pass</string>
+      <string>Loot-based</string>
+      <string>RPG</string>
+      <string>Third Person</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Death Road to Canada</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags />
+    <LastPicked>2021-08-23T20:20:38.1634509-07:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Deeprock Galactic</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>0</SupportedPlatforms>
+    <Tags>
+      <string>Cross Play</string>
+      <string>FPS</string>
+      <string>Highly Cooperative</string>
+    </Tags>
+    <LastPicked>2021-04-12T20:40:16.7983987-07:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
     <Name>Destiny 2</Name>
     <SupportedPlayers>6</SupportedPlayers>
-    <SupportedPlatforms>15</SupportedPlatforms>
+    <SupportedPlatforms>11</SupportedPlatforms>
     <Tags>
       <string>dope</string>
       <string>Competitive</string>
@@ -53,8 +135,9 @@
       <string>Highly Cooperative</string>
       <string>Platforming</string>
     </Tags>
-  </Game>
-  <Game>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
     <Name>Divinity: Original Sin 2</Name>
     <SupportedPlayers>4</SupportedPlayers>
     <SupportedPlatforms>8</SupportedPlatforms>
@@ -65,8 +148,9 @@
       <string>Turn-based</string>
       <string>Highly Cooperative</string>
     </Tags>
-  </Game>
-  <Game>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
     <Name>Dying Light</Name>
     <SupportedPlayers>4</SupportedPlayers>
     <SupportedPlatforms>8</SupportedPlatforms>
@@ -78,8 +162,9 @@
       <string>Crafting</string>
       <string>FPS</string>
     </Tags>
-  </Game>
-  <Game>
+    <LastPicked>2021-08-09T21:03:17.5851687-07:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
     <Name>Factorio</Name>
     <SupportedPlayers>6</SupportedPlayers>
     <SupportedPlatforms>8</SupportedPlatforms>
@@ -89,9 +174,12 @@
       <string>automation</string>
       <string>Crafting</string>
       <string>Highly Cooperative</string>
+      <string>Platforming</string>
+      <string>Overhead View</string>
     </Tags>
-  </Game>
-  <Game>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
     <Name>Final Fantasy XIV</Name>
     <SupportedPlayers>4</SupportedPlayers>
     <SupportedPlatforms>10</SupportedPlatforms>
@@ -99,17 +187,35 @@
       <string>Chill</string>
       <string>MMO</string>
       <string>RPG</string>
+      <string>Loot-based</string>
+      <string>Cross Play</string>
+      <string>Free to play</string>
     </Tags>
-  </Game>
-  <Game>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Gang Beasts</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>Arcade</string>
+      <string>Chill</string>
+      <string>Competitive</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
     <Name>Ghost of Tsushima</Name>
     <SupportedPlayers>4</SupportedPlayers>
     <SupportedPlatforms>2</SupportedPlatforms>
     <Tags>
       <string>Stealth</string>
+      <string>Third Person</string>
+      <string>RPG</string>
     </Tags>
-  </Game>
-  <Game>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
     <Name>Golf It!</Name>
     <SupportedPlayers>6</SupportedPlayers>
     <SupportedPlatforms>8</SupportedPlatforms>
@@ -118,8 +224,23 @@
       <string>Arcade</string>
       <string>Competitive</string>
     </Tags>
-  </Game>
-  <Game>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Jackbox Party Pack</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>31</SupportedPlatforms>
+    <Tags>
+      <string>Turn-based</string>
+      <string>Second screen gameplay</string>
+      <string>Highly Cooperative</string>
+      <string>Competitive</string>
+      <string>Deduction</string>
+      <string>Chill</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
     <Name>Minecraft</Name>
     <SupportedPlayers>6</SupportedPlayers>
     <SupportedPlatforms>31</SupportedPlatforms>
@@ -130,9 +251,67 @@
       <string>Platforming</string>
       <string>Game Pass</string>
       <string>Chill</string>
+      <string>Cross Play</string>
     </Tags>
-  </Game>
-  <Game>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Minecraft Dungeons</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>15</SupportedPlatforms>
+    <Tags>
+      <string>Arcade</string>
+      <string>Chill</string>
+      <string>Cross Play</string>
+      <string>Game Pass</string>
+      <string>Loot-based</string>
+      <string>Overhead View</string>
+      <string>RPG</string>
+      <string>Third Person</string>
+    </Tags>
+    <LastPicked>2021-03-29T12:25:43.185026-07:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Monster Hunter</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>5</SupportedPlatforms>
+    <Tags>
+      <string>Third Person</string>
+      <string>Loot-based</string>
+      <string>Highly Cooperative</string>
+      <string>Crafting</string>
+    </Tags>
+    <LastPicked>2021-05-03T20:04:02.4115697-07:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>No Man's Sky</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>11</SupportedPlatforms>
+    <Tags>
+      <string>Chill</string>
+      <string>Crafting</string>
+      <string>FPS</string>
+      <string>Game Pass</string>
+      <string>Highly Cooperative</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Operation: Tango</Name>
+    <SupportedPlayers>2</SupportedPlayers>
+    <SupportedPlatforms>11</SupportedPlatforms>
+    <Tags>
+      <string>Asymetric</string>
+      <string>Cross Play</string>
+      <string>FPS</string>
+      <string>Free to play</string>
+      <string>Highly Cooperative</string>
+      <string>Second screen gameplay</string>
+      <string>Stealth</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
     <Name>Out of Space</Name>
     <SupportedPlayers>4</SupportedPlayers>
     <SupportedPlatforms>8</SupportedPlatforms>
@@ -142,8 +321,22 @@
       <string>Chill</string>
       <string>Arcade</string>
     </Tags>
-  </Game>
-  <Game>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Outriders</Name>
+    <SupportedPlayers>3</SupportedPlayers>
+    <SupportedPlatforms>11</SupportedPlatforms>
+    <Tags>
+      <string>Cross Play</string>
+      <string>FPS</string>
+      <string>Loot-based</string>
+      <string>RPG</string>
+      <string>Third Person</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
     <Name>Overcooked</Name>
     <SupportedPlayers>4</SupportedPlayers>
     <SupportedPlatforms>1</SupportedPlatforms>
@@ -151,17 +344,23 @@
       <string>Highly Cooperative</string>
       <string>Arcade</string>
     </Tags>
-  </Game>
-  <Game>
-    <Name>Overcooked 2</Name>
-    <SupportedPlayers>4</SupportedPlayers>
-    <SupportedPlatforms>1</SupportedPlatforms>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Pokemon Unite</Name>
+    <SupportedPlayers>5</SupportedPlayers>
+    <SupportedPlatforms>4</SupportedPlatforms>
     <Tags>
-      <string>Arcade</string>
+      <string>Competitive</string>
+      <string>Free to play</string>
       <string>Highly Cooperative</string>
+      <string>Overhead View</string>
+      <string>Third Person</string>
+      <string>MOBA</string>
     </Tags>
-  </Game>
-  <Game>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
     <Name>Satisfactory</Name>
     <SupportedPlayers>6</SupportedPlayers>
     <SupportedPlatforms>8</SupportedPlatforms>
@@ -169,5 +368,143 @@
       <string>Crafting</string>
       <string>Highly Cooperative</string>
     </Tags>
-  </Game>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Space Hulk: Deathwing</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>FPS</string>
+      <string>Highly Cooperative</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Speed Runners</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>Arcade</string>
+      <string>Competitive</string>
+      <string>Platforming</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Star Wars: Outer Rim</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>Board Game</string>
+      <string>Competitive</string>
+      <string>Turn-based</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Star Wars: The Old Republic</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>MMO</string>
+      <string>RPG</string>
+      <string>Free to play</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>The Ascend</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>9</SupportedPlatforms>
+    <Tags>
+      <string>Arcade</string>
+      <string>Bullet Hell</string>
+      <string>Cross Play</string>
+      <string>Game Pass</string>
+      <string>Loot-based</string>
+      <string>Overhead View</string>
+      <string>RPG</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Torchlight 3</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>11</SupportedPlatforms>
+    <Tags>
+      <string>Arcade</string>
+      <string>Game Pass</string>
+      <string>Loot-based</string>
+      <string>RPG</string>
+      <string>Overhead View</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Ultimate Chicken Horse</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>14</SupportedPlatforms>
+    <Tags>
+      <string>Competitive</string>
+      <string>Platforming</string>
+      <string>Cross Play</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Unfortunate Spacemen</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>Betrayal</string>
+      <string>FPS</string>
+      <string>Free to play</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Valheim</Name>
+    <SupportedPlayers>6</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>Crafting</string>
+      <string>Third Person</string>
+    </Tags>
+    <LastPicked>2021-08-02T21:31:41.3151755-07:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>We Must go Deeper</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>Competitive</string>
+      <string>Highly Cooperative</string>
+      <string>Survival</string>
+    </Tags>
+    <LastPicked>2021-08-02T20:05:21.1162783-07:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>Wingspan</Name>
+    <SupportedPlayers>5</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>Board Game</string>
+      <string>Chill</string>
+      <string>Competitive</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
+  <HoboNightGame>
+    <Name>World of Warcraft</Name>
+    <SupportedPlayers>4</SupportedPlayers>
+    <SupportedPlatforms>8</SupportedPlatforms>
+    <Tags>
+      <string>Highly Cooperative</string>
+      <string>Loot-based</string>
+      <string>MMO</string>
+      <string>RPG</string>
+    </Tags>
+    <LastPicked>0001-01-01T00:00:00</LastPicked>
+  </HoboNightGame>
 </ArrayOfHoboNightGame>
