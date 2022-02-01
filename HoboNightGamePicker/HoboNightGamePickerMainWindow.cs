@@ -121,7 +121,8 @@ namespace HoboNightGamePicker
             string[] selectedGames = GetSelectedGameList();
             try
             {
-                Game game = RandomGamePicker.SelectRandomGameWithWeights(selectedGames);
+                Game game = checkBox_WeightedPick.Checked ? RandomGamePicker.SelectRandomGameWithWeights(selectedGames) :
+                    RandomGamePicker.SelectRandomGameEqualWeights(selectedGames);
 
                 if (game != null)
                 {
