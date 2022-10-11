@@ -1,7 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +12,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Files\HoboGameLibrary.xml">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Files\SupportedTags.xml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
@@ -19,9 +20,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="System.Windows.Forms">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Windows.Forms.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SQLManager\SQLManager.csproj" />
   </ItemGroup>
 
 </Project>

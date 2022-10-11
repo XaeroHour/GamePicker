@@ -1,0 +1,50 @@
+﻿@page
+@model GamePickerWeb.Pages.GamePickerModel
+@{
+}
+
+<h3>Game Picker</h3>
+<form class="form-horizontal" method="post">
+    <div class="form-group">
+        <label for="SupportedPlayers" class="col-sm-2 control-label">Supported Players</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" name="SupportedPlayers" value="@Model.SupportedPlayers">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="EnforcePlayerCount" class="col-sm-2 control-label">Enforce Player Count</label>
+        <div class="col-sm-10">
+            <input type="checkbox" name="EnforcePlayerCount" value="@Model.EnforcePlayerCount">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="SupportedPlatforms" class="col-sm-2 control-label">Supported Platforms</label>
+        <div class="col-sm-10">
+            <select multiple="multiple" asp-for="SupportedPlatforms" asp-items="Html.GetEnumSelectList<GamePicker.Platform>()">
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="RequiredTags" class="col-sm-2 control-label">Required Tags</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="RequiredTags" value="@Model.RequriedTags">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" asp-route-param="Submit">Pick a game!</button>
+        </div>
+	</div>
+	<p>
+		<div class="form-group">
+			<label for="PickedGame" class="col-sm-2 control-label">@Model.PickedGame</label>
+		</div>
+    </p>
+    <div class="form-group">
+        <label for="SelectedGames" class="col-sm-2 control-label">Create a hat!</label>
+        <div class="col-sm-10">
+            <select multiple="multiple" asp-for="SelectedGames" asp-items="@Model.SelectedGamesList" size="20">
+            </select>
+        </div>
+    </div>
+</form>

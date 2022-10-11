@@ -15,31 +15,13 @@ namespace GamePicker
         /// <summary>
         /// The list of games in the library
         /// </summary>
-        public static List<HoboNightGame> HoboGameLibrary = new List<HoboNightGame>();
-
-        /// <summary>
-        /// The path to the game library XML
-        /// </summary>
-        public static string XMLFilePath { get; } = $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\GamePicker\HoboGameLibrary.xml";
-
-        static GameLibrary()
-        {
-            Deserialize();
-        }
-
-        /// <summary>
-        /// Save the library data out to the XML
-        /// </summary>
-        public static void SaveLibrary()
-        {
-            Serialize();
-        }
+        public static List<GameModel> HoboGameLibrary = new List<GameModel>();
 
         /// <summary>
         /// Add a game to the library if it isn't already present
         /// </summary>
         /// <param name="newTitle">The new game to add</param>
-        public static void AddGame(HoboNightGame newTitle)
+        public static void AddGame(GameModel newTitle)
         {
             if(!HoboGameLibrary.Contains(newTitle))
             {
@@ -52,17 +34,21 @@ namespace GamePicker
         /// </summary>
         /// <param name="gameName">The name of the game to look up</param>
         /// <returns>Returns the desired game. Null if no game is found.</returns>
-        public static HoboNightGame FindGame(string gameName) => HoboGameLibrary.Find(game => string.Equals(gameName, game.Name, StringComparison.OrdinalIgnoreCase));
+        public static GameModel FindGame(string gameName) => HoboGameLibrary.Find(game => string.Equals(gameName, game.Title, StringComparison.OrdinalIgnoreCase));
 
-        public static void Serialize()
+        public static void SaveLibraryToXML(string xmlFilePath)
         {
-            XmlSerializer serializer = new XmlSerializer(HoboGameLibrary.GetType());
+            if (!File.Exists(xmlFilePath))
+            {
+                return;
+            }
 
-            HoboGameLibrary.Sort();
+            XmlSerializer serializer = new XmlSerializer(HoboGameLibrary.GetType());
 
             try
             {
-                using (StreamWriter writer = new StreamWriter(XMLFilePath))
+                HoboGameLibrary.Sort();
+                using (StreamWriter writer = new StreamWriter(xmlFilePath))
                 {
                     serializer.Serialize(writer, HoboGameLibrary);
                 }
@@ -73,17 +59,20 @@ namespace GamePicker
             }
         }
 
-        public static void Deserialize()
+        public static void LoadLibraryFromXML(string xmlFilePath)
         {
+            if (!File.Exists(xmlFilePath))
+            {
+                return;
+            }
+
             XmlSerializer serializer = new XmlSerializer(HoboGameLibrary.GetType());
 
             try
             {
-                using (StreamReader reader = File.Exists(XMLFilePath) ?
-                    new StreamReader(XMLFilePath) :
-                    new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("GamePicker.Files.HoboGameLibrary.xml")))
+                using (StreamReader reader = new StreamReader(xmlFilePath))
                 {
-                    HoboGameLibrary = (List<HoboNightGame>)serializer.Deserialize(reader);
+                    HoboGameLibrary = (List<GameModel>)serializer.Deserialize(reader);
                     HoboGameLibrary.Sort();
                 }
             }
@@ -91,6 +80,14 @@ namespace GamePicker
             {
                 MessageBox.Show($"Exception hit: {ex.Message}", "Cannot Deserialize", MessageBoxButtons.OK);
             }
+        }
+
+        public static void SaveLibraryToSQL()
+        {
+        }
+
+        public static void LoadLibraryFromSQL()
+        {
         }
     }
 }
