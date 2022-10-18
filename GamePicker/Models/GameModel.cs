@@ -114,6 +114,11 @@ namespace GamePicker
         /// <returns>Returns true if all the tags are in the game, false otherwise</returns>
         public bool ContainsTags(IEnumerable<string> tags)
         {
+            if (this.Tags == null)
+            {
+                return false;
+            }
+
             if (tags != null)
             {
                 foreach (string tag in tags)
