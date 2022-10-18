@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GamePicker.Models
 {
-    public class GameTag : IComparable
+    public class GameTagModel : IComparable
     {
         public int Id { get; set; } = 0;
 
@@ -14,7 +14,7 @@ namespace GamePicker.Models
 
         public int CompareTo(object obj)
         {
-            GameTag gameTag = obj as GameTag;
+            GameTagModel gameTag = obj as GameTagModel;
             return this.Name.CompareTo(gameTag?.Name);
         }
     }
