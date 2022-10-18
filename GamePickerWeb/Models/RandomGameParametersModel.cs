@@ -1,6 +1,6 @@
 ﻿namespace GamePickerWeb.Models
 {
-	public class RandomGameParameters
+	public class RandomGameParametersModel
 	{
 		public uint SupportedPlayers { get; set; } = 1;
 

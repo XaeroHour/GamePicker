@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using GamePicker;
+using GamePickerWeb.Pages;
+using GamePickerWeb.Models;
 
 namespace GamePickerWeb.Data
 {
@@ -14,6 +16,10 @@ namespace GamePickerWeb.Data
         {
         }
 
-        public DbSet<GamePicker.GameModel> GameModel { get; set; } = default!;
+        public DbSet<GameModel> GameModel { get; set; } = default!;
+
+        public DbSet<DailyGameCandidateModel> DailyGameCandidateModel { get; set; } = default!;
+
+        public DbSet<PickedGameModel> PickedGameModel { get; set; } = default!;
     }
 }

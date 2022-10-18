@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using GamePickerWeb.Data;
 using GamePickerWeb.Models;
+using GamePickerWeb.Pages;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +16,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-    SeedData.Initialize(services);
+    SeedDataModel.Initialize(services);
 }
 
 // Configure the HTTP request pipeline.

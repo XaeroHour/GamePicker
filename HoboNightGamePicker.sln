@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamePickerWeb", "GamePicker
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLManager", "SQLManager\SQLManager.csproj", "{09F6325D-4DAC-4048-9263-5E6319C1B36E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamePickerWindowsApp", "GamePickerWindowsApp\GamePickerWindowsApp.csproj", "{FA30F59C-805A-40C3-AECF-520E989DB476}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamePickerWindowsApp", "GamePickerWindowsApp\GamePickerWindowsApp.csproj", "{FA30F59C-805A-40C3-AECF-520E989DB476}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

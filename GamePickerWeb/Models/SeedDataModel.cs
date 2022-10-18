@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 namespace GamePickerWeb.Models
 {
-    public static class SeedData
+    public static class SeedDataModel
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {

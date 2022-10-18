@@ -1,4 +1,5 @@
 using GamePicker;
+using GamePickerWeb.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -26,13 +27,21 @@ namespace GamePickerWeb.Pages
         [BindProperty]
         public string[] SelectedGames { get; set; }
 
-        public IEnumerable<GameModel> GameList => GameLibrary.HoboGameLibrary;
-
         public SelectList SelectedGamesList { get; set; }
+
+        private readonly GamePickerWebContext _context;
+
+        public GamePickerModel(GamePickerWebContext context)
+        {
+            _context = context;
+        }
 
         public void OnGet()
         {
-            SelectedGamesList = new SelectList(GameList.Select(game => game.Title));
+            if (_context != null)
+            {
+                SelectedGamesList = new SelectList(_context.GameModel.Select(game => game.Title));
+            }
         }
 
         public void OnPost()
@@ -52,7 +61,10 @@ namespace GamePickerWeb.Pages
                     ?? String.Empty;
             }
 
-            SelectedGamesList = new SelectList(GameList.Select(game => game.Title));
+            if (_context != null)
+            {
+                SelectedGamesList = new SelectList(_context.GameModel.Select(game => game.Title));
+            }
         }
     }
 }
