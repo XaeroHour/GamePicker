@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Xml.Serialization;
 
 namespace GamePicker
@@ -99,7 +100,9 @@ namespace GamePicker
 
             XmlSerializer serializer = new XmlSerializer(supportedTags.GetType());
 
-            using (StreamReader reader = new StreamReader(XMLFilePath))
+            using (StreamReader reader = File.Exists(XMLFilePath) ?
+                new StreamReader(XMLFilePath) :
+                new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("GamePicker.Files.SupportedTags.xml")))
             {
                 supportedTags = (List<string>)serializer.Deserialize(reader);
                 supportedTags.Sort();
