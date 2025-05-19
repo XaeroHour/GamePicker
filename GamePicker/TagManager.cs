@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Xml.Serialization;
 
 namespace GamePicker;
@@ -48,9 +49,9 @@ public static class TagManager
     {
         bool tagAdded = false;
 
-        foreach(string tag in tags)
+        foreach (string tag in tags)
         {
-            if(!supportedTags.Contains(tag, StringComparer.OrdinalIgnoreCase))
+            if (!supportedTags.Contains(tag, StringComparer.OrdinalIgnoreCase))
             {
                 supportedTags.Add(tag);
                 supportedTags.Sort();
@@ -67,7 +68,7 @@ public static class TagManager
     /// <param name="tags">Tags to remove</param>
     public static void RemoveTags(params string[] tags)
     {
-        foreach(string tag in tags)
+        foreach (string tag in tags)
         {
             supportedTags.Remove(tag.ToLower());
         }
@@ -97,7 +98,9 @@ public static class TagManager
 
         XmlSerializer serializer = new(supportedTags.GetType());
 
-        using StreamReader reader = new(XMLFilePath);
+        using StreamReader reader = File.Exists(XMLFilePath) ?
+            new StreamReader(XMLFilePath) :
+            new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("GamePicker.Files.SupportedTags.xml"));
         supportedTags = (List<string>)serializer.Deserialize(reader);
         supportedTags.Sort();
     }
