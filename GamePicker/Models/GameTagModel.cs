@@ -1,21 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GamePicker.Models
+namespace GamePicker.Models;
+
+public class GameTagModel : IComparable
 {
-    public class GameTagModel : IComparable
+    public int Id { get; set; } = 0;
+
+    public string Name { get; set; }
+
+    public int CompareTo(object obj)
     {
-        public int Id { get; set; } = 0;
+        GameTagModel gameTag = obj as GameTagModel;
+        return this.Name.CompareTo(gameTag?.Name);
+    }
 
-        public string Name { get; set; }
-
-        public int CompareTo(object obj)
+    public bool Equals(GameTagModel other)
+    {
+        if (other == null)
         {
-            GameTagModel gameTag = obj as GameTagModel;
-            return this.Name.CompareTo(gameTag?.Name);
+            return false;
         }
+        return this.Name.Equals(other.Name, StringComparison.OrdinalIgnoreCase);
     }
 }

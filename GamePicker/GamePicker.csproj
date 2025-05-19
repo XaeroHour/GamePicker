@@ -33,8 +33,4 @@
     <Folder Include="ViewModels\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\SQLManager\SQLManager.csproj" />
-  </ItemGroup>
-
 </Project>

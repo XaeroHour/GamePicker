@@ -5,10 +5,6 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamePicker", "GamePicker\GamePicker.csproj", "{9BE98A42-0D51-4D24-8F79-4243984E2579}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamePickerWeb", "GamePickerWeb\GamePickerWeb.csproj", "{55DC7115-889E-4441-AB27-C4BF5F30825C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLManager", "SQLManager\SQLManager.csproj", "{09F6325D-4DAC-4048-9263-5E6319C1B36E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamePickerWindowsApp", "GamePickerWindowsApp\GamePickerWindowsApp.csproj", "{FA30F59C-805A-40C3-AECF-520E989DB476}"
 EndProject
 Global
@@ -21,14 +17,6 @@ Global
 		{9BE98A42-0D51-4D24-8F79-4243984E2579}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BE98A42-0D51-4D24-8F79-4243984E2579}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BE98A42-0D51-4D24-8F79-4243984E2579}.Release|Any CPU.Build.0 = Release|Any CPU
-		{55DC7115-889E-4441-AB27-C4BF5F30825C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55DC7115-889E-4441-AB27-C4BF5F30825C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55DC7115-889E-4441-AB27-C4BF5F30825C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55DC7115-889E-4441-AB27-C4BF5F30825C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09F6325D-4DAC-4048-9263-5E6319C1B36E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09F6325D-4DAC-4048-9263-5E6319C1B36E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09F6325D-4DAC-4048-9263-5E6319C1B36E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09F6325D-4DAC-4048-9263-5E6319C1B36E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FA30F59C-805A-40C3-AECF-520E989DB476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FA30F59C-805A-40C3-AECF-520E989DB476}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA30F59C-805A-40C3-AECF-520E989DB476}.Release|Any CPU.ActiveCfg = Release|Any CPU

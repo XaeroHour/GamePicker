@@ -1,9 +1,6 @@
 ﻿using GamePicker;
-using System;
-using System.Collections.Generic;
+using GamePicker.Models;
 using System.Data;
-using System.Linq;
-using System.Windows.Forms;
 
 namespace HoboNightGamePicker
 {
@@ -12,7 +9,7 @@ namespace HoboNightGamePicker
         /// <summary>
         /// The game currently selected to display info for
         /// </summary>
-        GameModel SelectedGame = null;
+        GameModel? SelectedGame = null;
 
         public Form_HoboNightGamePicker()
         {
@@ -40,8 +37,8 @@ namespace HoboNightGamePicker
         /// </summary>
         private void UpdateSelectedGameInfo()
         {
-            List<string> selectedPlatforms = new List<string>();
-            List<string> selectedTags = new List<string>();
+            List<string> selectedPlatforms = new();
+            List<string> selectedTags = new();
 
             if (SelectedGame == null)
             {
@@ -53,12 +50,12 @@ namespace HoboNightGamePicker
                 players = 6;
             }
 
-            foreach(string selectedPlatform in checkedListBox_Platforms.CheckedItems)
+            foreach (string selectedPlatform in checkedListBox_Platforms.CheckedItems)
             {
                 selectedPlatforms.Add(selectedPlatform);
             }
 
-            foreach(string selectedTag in checkedListBox_GameTags.CheckedItems)
+            foreach (string selectedTag in checkedListBox_GameTags.CheckedItems)
             {
                 selectedTags.Add(selectedTag);
             }
@@ -76,9 +73,9 @@ namespace HoboNightGamePicker
 
         #region Form control functions
         #region Button click functions
-        private void button_AddNewGame_Click(object sender, EventArgs e)
+        private void Button_AddNewGame_Click(object sender, EventArgs e)
         {
-            if(!listBox_GameLibrary.Items.Contains(textBox_NewGame.Text))
+            if (!listBox_GameLibrary.Items.Contains(textBox_NewGame.Text))
             {
                 listBox_GameLibrary.Items.Add(textBox_NewGame.Text);
                 checkedListBox_GamePickerGameHat.Items.Add(textBox_NewGame.Text);
@@ -86,12 +83,12 @@ namespace HoboNightGamePicker
             }
         }
 
-        private void button_PickAGame_Click(object sender, EventArgs e)
+        private void Button_PickAGame_Click(object sender, EventArgs e)
         {
             string[] selectedPlatforms = checkedListBox_GamePickerPlatforms.CheckedItems.Cast<string>().ToArray();
             string[] selectedTags = checkedListBox_GamePickerTags.SelectedItems.Cast<string>().ToArray();
 
-            if(!int.TryParse(comboBox_GamePickerPlayers.Text, out int players))
+            if (!int.TryParse(comboBox_GamePickerPlayers.Text, out int players))
             {
                 players = 2;
             }
@@ -110,13 +107,13 @@ namespace HoboNightGamePicker
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Exception hit: {ex.Message}", "Error", MessageBoxButtons.OK);
             }
         }
 
-        private void button_PickAGameFromTheHat_Click(object sender, EventArgs e)
+        private void Button_PickAGameFromTheHat_Click(object sender, EventArgs e)
         {
             string[] selectedGames = GetSelectedGameList();
             try
@@ -136,30 +133,30 @@ namespace HoboNightGamePicker
             }
         }
 
-        private void button_Lock_Click(object sender, EventArgs e)
+        private void Button_Lock_Click(object sender, EventArgs e)
         {
             GameModel selection = RandomGamePicker.FindGame(textBox_SelectedGame.Text);
 
-            if(selection != null)
+            if (selection != null)
             {
                 RandomGamePicker.ConfirmGameSelection(selection);
             }
         }
         #endregion
 
-        private void listBox_GameLibrary_SelectedValueChanged(object sender, EventArgs e)
+        private void ListBox_GameLibrary_SelectedValueChanged(object sender, EventArgs e)
         {
             SelectedGame = RandomGamePicker.FindGame(listBox_GameLibrary.Text);
 
             groupBox_SelectedGame.Text = SelectedGame?.Title;
 
-            if(SelectedGame == null)
+            if (SelectedGame == null)
             {
                 return;
             }
 
             // Set up the game tags to match the ones for the game
-            for(int i = 0; i < checkedListBox_GameTags.Items.Count; i++)
+            for (int i = 0; i < checkedListBox_GameTags.Items.Count; i++)
             {
                 checkedListBox_GameTags.SetItemCheckState(i, SelectedGame.ContainsTag(checkedListBox_GameTags.Items[i].ToString()) ? CheckState.Checked : CheckState.Unchecked);
             }
@@ -168,14 +165,17 @@ namespace HoboNightGamePicker
             comboBox_Players.Text = SelectedGame.SupportedPlayers.ToString();
 
             // Set the supported platforms up
-            for(int i = 0; i < checkedListBox_Platforms.Items.Count; i++)
+            if (checkedListBox_Platforms is not null)
             {
-                Platform plat = (Platform)Enum.Parse(typeof(Platform), checkedListBox_Platforms.Items[i].ToString());
-                checkedListBox_Platforms.SetItemChecked(i, SelectedGame.SupportsPlatform(plat));
+                for (int i = 0; i < checkedListBox_Platforms!.Items.Count; i++)
+                {
+                    Platform plat = (Platform)Enum.Parse(typeof(Platform), checkedListBox_Platforms?.Items[i]?.ToString() ?? "PC");
+                    checkedListBox_Platforms!.SetItemChecked(i, SelectedGame.SupportsPlatform(plat));
+                }
             }
         }
 
-        private void comboBox_Players_SelectionChangeCommitted(object sender, EventArgs e) => UpdateSelectedGameInfo();
+        private void ComboBox_Players_SelectionChangeCommitted(object sender, EventArgs e) => UpdateSelectedGameInfo();
 
         #region Checked list box fuctions
         /**
@@ -183,24 +183,24 @@ namespace HoboNightGamePicker
          * Turns out ItemCheck fires BEFORE the value is changed and there's no separate event for when the change is committed.
          * To get around this, using BeginInvoke calls the delegate AFTER the event is processed and changes the value(s).
          */
-        private void checkedListBox_GameTags_ItemCheck(object sender, ItemCheckEventArgs e) => this.BeginInvoke((MethodInvoker)delegate { UpdateSelectedGameInfo(); });
+        private void CheckedListBox_GameTags_ItemCheck(object sender, ItemCheckEventArgs e) => this.BeginInvoke((MethodInvoker)delegate { UpdateSelectedGameInfo(); });
 
-        private void checkedListBox_Platforms_ItemCheck(object sender, ItemCheckEventArgs e) => this.BeginInvoke((MethodInvoker)delegate { UpdateSelectedGameInfo(); });
+        private void CheckedListBox_Platforms_ItemCheck(object sender, ItemCheckEventArgs e) => this.BeginInvoke((MethodInvoker)delegate { UpdateSelectedGameInfo(); });
         #endregion
 
         #region File menu functions
-        private void editTagsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EditTagsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TagEditorForm tagEditor = new TagEditorForm();
+            TagEditorForm tagEditor = new();
 
-            if(tagEditor.ShowDialog() == DialogResult.OK)
+            if (tagEditor.ShowDialog() == DialogResult.OK)
             {
                 TagManager.SaveTags();
                 UpdateTagsLists();
             }
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
